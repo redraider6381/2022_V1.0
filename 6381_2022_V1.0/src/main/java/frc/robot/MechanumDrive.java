@@ -10,8 +10,6 @@ public class MechanumDrive{
      * X-Box controller drives robot
      */
 public static void driveRobot(){
-
-    //Do something to drivePower here:
    
 
     //Joysticks:
