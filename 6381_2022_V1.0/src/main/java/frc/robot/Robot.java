@@ -21,7 +21,9 @@ public class Robot extends RobotBase {
 
   public void autonomous() {}
 
-  public void teleop() {}
+  public void teleop() {
+    MechanumDrive.driveRobot();
+  }
 
   public void test() {}
 
