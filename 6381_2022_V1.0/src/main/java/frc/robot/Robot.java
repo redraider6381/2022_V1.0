@@ -7,6 +7,7 @@ package frc.robot;
 import edu.wpi.first.hal.HAL;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.RobotBase;
+import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 
@@ -21,7 +22,9 @@ public class Robot extends RobotBase {
 
   public void autonomous() {}
 
-  public void teleop() {}
+  public void teleop() {
+    MechanumDrive.driveRobot();
+  }
 
   public void test() {}
 

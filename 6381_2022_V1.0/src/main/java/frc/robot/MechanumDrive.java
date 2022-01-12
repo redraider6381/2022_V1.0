@@ -38,36 +38,3 @@ public static void driveRobot(){
         Components.CANBackRight.set(drivePower*wheels.backRight);
     }
 }
-
-
-
-
-
-
-/*   TWO YEARS AGO CODE (TANKDRIVE)
-
-    double leftXboxAxis = Components.XBController.getRawAxis(1) *.75;
-    double rightXboxAxis = Components.XBController.getRawAxis(5) * .75;
-
-    // Joystick deadzone controls
-    if(Math.abs(leftXboxAxis) < .2) leftXboxAxis = 0;
-    if(Math.abs(rightXboxAxis) < .2) rightXboxAxis = 0;
-
-
-    if(Components.XBController.getBumper(Hand.kLeft) ^ Components.XBController.getBumper(Hand.kRight)) {
-        //Components.speedLeft.set(leftXboxAxis*.75);
-        //Components.speedRight.set(rightXboxAxis*.75);
-        Components.speedLeft.set(leftXboxAxis*.6);
-        Components.speedRight.set(rightXboxAxis*.6);
-    } else if (Components.XBController.getBumper(Hand.kLeft) && Components.XBController.getBumper(Hand.kRight)) {
-        //Components.speedLeft.set(leftXboxAxis*.5);
-        //Components.speedRight.set(rightXboxAxis*.5);
-        Components.speedLeft.set(leftXboxAxis*.4);
-        Components.speedRight.set(rightXboxAxis*.4);
-    }
-    else {
-        Components.speedLeft.set(leftXboxAxis);
-        Components.speedRight.set(rightXboxAxis);    
-    }
-    
-*/
