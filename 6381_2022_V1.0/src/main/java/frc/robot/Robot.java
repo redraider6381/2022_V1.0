@@ -16,7 +16,19 @@ import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
  * package after creating this project, you must also update the build.gradle file in the project.
  */
 public class Robot extends RobotBase {
-  public void robotInit() {}
+  // pathweaver stuff
+  String trajectoryJSON = "paths/Lame.wpilib.json";
+  Trajectory trajectory = new Trajectory();
+
+  public void robotInit() {
+    // um pathweaver maybe - AJ
+    try {
+      Path trajectoryPath = Filesystem.getDeployDirectory().toPath().resolve(trajectoryJSON);
+      trajectory = TrajectoryUtil.fromPathweaverJson(trajectoryPath);
+    } catch (IOException ex) {
+      DriverStation.reportError("Unable to open trajectory: " + trajectoryJSON, ex.getStackTrace());
+    }
+  }
 
   public void disabled() {}
 
